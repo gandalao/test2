@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 生产环境版本，优化了尺寸和速度 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>实战dome</title>
+</head>
+
+<body>
+    <div id="vue-app">
+
+        <div id="bag" :class="{burst:ended}"></div>
+
+        <div id="bag-health">
+            <div :style="{width: health + '%'}"></div>
+        </div>
+        <div id="controls">
+            <button @click="qiaoda" v-show="!ended">敲打</button>
+            <button @click="fuyuan">复原</button>
+        </div>
+    </div>
+
+
+</body>
+<script src="app.js"></script>
+
+</html>
